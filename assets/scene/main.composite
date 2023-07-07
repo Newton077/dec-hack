@@ -2,6 +2,38 @@
   "version": 1,
   "components": [
     {
+      "name": "composite::root",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "type": "string",
+            "serializationType": "utf8-string"
+          },
+          "entities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "src": {
+                  "type": "integer",
+                  "serializationType": "entity"
+                },
+                "dest": {
+                  "type": "integer",
+                  "serializationType": "entity"
+                }
+              },
+              "serializationType": "map"
+            },
+            "serializationType": "array"
+          }
+        },
+        "serializationType": "map"
+      },
+      "data": {}
+    },
+    {
       "name": "core::Transform",
       "jsonSchema": {
         "type": "object",
@@ -78,6 +110,69 @@
             },
             "parent": 0
           }
+        },
+        "513": {
+          "json": {
+            "position": {
+              "x": 3.25,
+              "y": -0.08848674595355988,
+              "z": 9.75
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "parent": 0
+          }
+        },
+        "514": {
+          "json": {
+            "position": {
+              "x": 4.238552093505859,
+              "y": 0.5558474659919739,
+              "z": 9.350000381469727
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "parent": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "core::GltfContainer",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {},
+        "serializationType": "protocol-buffer",
+        "protocolBuffer": "PBGltfContainer"
+      },
+      "data": {
+        "513": {
+          "json": {
+            "src": "assets/builder/grave__20/HWN20_Grave_20.glb"
+          }
+        },
+        "514": {
+          "json": {
+            "src": "assets/builder/skull_deco_pink/HWN20_SkullDeco_DDLM_03.glb"
+          }
         }
       }
     },
@@ -118,6 +213,36 @@
         "512": {
           "json": {
             "value": "Magic Cube"
+          }
+        },
+        "513": {
+          "json": {
+            "value": "Grave  20"
+          }
+        },
+        "514": {
+          "json": {
+            "value": " Skull Deco Pink"
+          }
+        }
+      }
+    },
+    {
+      "name": "inspector::Selection",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "gizmo": {
+            "type": "integer",
+            "serializationType": "int32"
+          }
+        },
+        "serializationType": "map"
+      },
+      "data": {
+        "514": {
+          "json": {
+            "gizmo": 0
           }
         }
       }
